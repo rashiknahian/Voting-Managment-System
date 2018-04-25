@@ -6,7 +6,7 @@
 * Import **votingdatabase.sql** file in the database
 
 ## Admin
-*localhost/Voting-Managment-System/admin
+* Go to : localhost/Voting-Managment-System/admin
 
 ## Admin Default ID & Password
 * **Username:** admin@gmail.com
