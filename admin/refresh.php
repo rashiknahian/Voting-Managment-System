@@ -21,39 +21,42 @@ if (isset($_POST['Submit'])){
 }
     else
         // do nothing
-?> 
-<?php
+?>
+    <?php
 // retrieving positions sql query
 $positions= $mysqli->query("SELECT * FROM tbPositions")
 or die("There are no records to display ... \n" . mysqli_error()); 
 ?>
 
 
-<?php if(isset($_POST['Submit'])){$totalvotes=$candidate_1+$candidate_2;} ?>
+        <?php if(isset($_POST['Submit'])){$totalvotes=$candidate_1+$candidate_2;} ?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<?php include "head.php"; ?>
+        <!DOCTYPE html>
+        <html>
 
-</head>
-<body id="top">
+        <head>
+            <?php include "head.php"; ?>
+
+        </head>
+
+        <body id="top">
 
 
 
-<div class="wrapper row1">
-  <?php include "header_admin.php";?>
-</div>
+            <div class="wrapper row1">
+                <?php include "header_admin.php";?>
+            </div>
 
-<div >
- 
-  <div >
-    <table width="420" align="center">
-    <form name="fmNames" id="fmNames" method="post" action="refresh.php" onSubmit="return positionValidate(this)">
-    <tr>
-        <td style="color:#000000";>Choose Position</td>
-        <td><SELECT NAME="position" id="position">
+            <div>
+
+                <div>
+                    <table width="420" align="center">
+                        <form name="fmNames" id="fmNames" method="post" action="refresh.php" onSubmit="return positionValidate(this)">
+                            <tr>
+                                <td style="color:#000000" ;>Choose Position</td>
+                                <td>
+                                    <SELECT NAME="position" id="position">
         <OPTION  VALUE="select"><p style="color:black";>select</p>
         <?php 
         //loop through all table rows
@@ -61,36 +64,37 @@ or die("There are no records to display ... \n" . mysqli_error());
           echo "<OPTION VALUE=$row[position_name]>$row[position_name]"; 
         }
         ?>
-        </SELECT></td>
-        <td style="color:black";><input type="submit" name="Submit" value="See Results" /></td>
-    </tr>
-    <tr>
-     
-        
-    </tr>
-    </form> 
-    </table>
-    <?php if(isset($_POST['Submit'])){echo $candidate_name_1;} ?>:<br>
-    <img src="images/candidate-1.gif"
-    width='<?php if(isset($_POST['Submit'])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_1/($candidate_2+$candidate_1),2));}} ?>'
-    height='10'>
-    <?php if(isset($_POST['Submit'])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_1/($candidate_2+$candidate_1),2));}} ?>% of <?php if(isset($_POST['Submit'])){echo $totalvotes;} ?> total votes
-    <br>votes <?php if(isset($_POST['Submit'])){ echo $candidate_1;} ?>
-    <br>
-    <br>
-    <?php if(isset($_POST['Submit'])){ echo $candidate_name_2;} ?>:<br>
-    <img src="images/candidate-2.gif"
-    width='<?php if(isset($_POST['Submit'])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_2/($candidate_2+$candidate_1),2));}} ?>'
-    height='10'>
-    <?php if(isset($_POST['Submit'])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_2/($candidate_2+$candidate_1),2));}} ?>% of <?php if(isset($_POST['Submit'])){echo $totalvotes;} ?> total votes
-    <br>votes <?php if(isset($_POST['Submit'])){ echo $candidate_2;} ?>
-  
-  </div>
-
-</div>
+        </SELECT>
+                                </td>
+                                <td style="color:black" ;><input type="submit" name="Submit" value="See Results" /></td>
+                            </tr>
+                            <tr>
 
 
+                            </tr>
+                        </form>
+                    </table>
+                    <?php if(isset($_POST['Submit'])){echo $candidate_name_1;} ?>:<br>
+                    <img src="images/candidate-1.gif" width='<?php if(isset($_POST[' Submit '])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_1/($candidate_2+$candidate_1),2));}} ?>' height='10'>
+                    <?php if(isset($_POST['Submit'])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_1/($candidate_2+$candidate_1),2));}} ?>% of
+                    <?php if(isset($_POST['Submit'])){echo $totalvotes;} ?> total votes
+                    <br>votes
+                    <?php if(isset($_POST['Submit'])){ echo $candidate_1;} ?>
+                    <br>
+                    <br>
+                    <?php if(isset($_POST['Submit'])){ echo $candidate_name_2;} ?>:<br>
+                    <img src="images/candidate-2.gif" width='<?php if(isset($_POST[' Submit '])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_2/($candidate_2+$candidate_1),2));}} ?>' height='10'>
+                    <?php if(isset($_POST['Submit'])){ if ($candidate_2 || $candidate_1 != 0){echo(100*round($candidate_2/($candidate_2+$candidate_1),2));}} ?>% of
+                    <?php if(isset($_POST['Submit'])){echo $totalvotes;} ?> total votes
+                    <br>votes
+                    <?php if(isset($_POST['Submit'])){ echo $candidate_2;} ?>
 
-</body>
-</html>
+                </div>
 
+            </div>
+
+
+
+        </body>
+
+        </html>

@@ -66,12 +66,14 @@ else {
 
 ob_end_flush();
 
-?> 
-<!DOCTYPE html>
-<html>
-<body style="background-color:powderblue;">
+?>
+    <!DOCTYPE html>
+    <html>
+
+    <body style="background-color:powderblue;">
 
 
 
-</body>
-</html>
+    </body>
+
+    </html>

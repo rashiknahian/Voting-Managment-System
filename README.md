@@ -9,5 +9,5 @@
 *localhost/Voting-Managment-System/admin
 
 ## Admin Default ID & Password
-* **Username : ** admin@gmail.com
-* **Password : ** admin
+* **Username:** admin@gmail.com
+* **Password:** admin

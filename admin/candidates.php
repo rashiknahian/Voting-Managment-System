@@ -12,12 +12,12 @@ error_reporting(0);
     }
 ?>
 
-<?php
+    <?php
     $positions_retrieved= $mysqli->query("SELECT * FROM tbPositions")
     or die("There are no records to display ... \n" . mysqli_error()); 
 ?>
 
-<?php
+        <?php
 if (isset($_POST['Submit']))
 {
 
@@ -31,7 +31,7 @@ if (isset($_POST['Submit']))
     
     }
 ?>
-<?php
+            <?php
     // deleting sql query
     // check if the 'id' variable is set in URL
      if (isset($_GET['id']))
@@ -49,33 +49,38 @@ if (isset($_POST['Submit']))
      else
      // do nothing         
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<?php include "head.php"; ?>
+                <!DOCTYPE html>
+                <html>
 
-</head>
-<body id="top">
+                <head>
+                    <?php include "head.php"; ?>
+
+                </head>
+
+                <body id="top">
 
 
 
-<div class="wrapper row1">
-  <?php include "header_admin.php";?>
-</div>
+                    <div class="wrapper row1">
+                        <?php include "header_admin.php";?>
+                    </div>
 
-<div >
-<table width="380" align="center">
-<CAPTION><h3>ADD NEW CANDIDATE</h3></CAPTION>
-<form name="fmCandidates" id="fmCandidates" action="candidates.php" method="post" onsubmit="return candidateValidate(this)">
-<tr>
-    <td bgcolor="#FAEBD7">Candidate Name</td>
-    <td bgcolor="#FAEBD7"><input type="text" name="name" /></td>
-</tr>
+                    <div>
+                        <table width="380" align="center">
+                            <CAPTION>
+                                <h3>ADD NEW CANDIDATE</h3>
+                            </CAPTION>
+                            <form name="fmCandidates" id="fmCandidates" action="candidates.php" method="post" onsubmit="return candidateValidate(this)">
+                                <tr>
+                                    <td bgcolor="#FAEBD7">Candidate Name</td>
+                                    <td bgcolor="#FAEBD7"><input type="text" name="name" /></td>
+                                </tr>
 
-<tr>
-    <td bgcolor="#7FFFD4">Candidate Position</td>
-    
-    <td bgcolor="#7FFFD4"><SELECT NAME="position" id="position">select
+                                <tr>
+                                    <td bgcolor="#7FFFD4">Candidate Position</td>
+
+                                    <td bgcolor="#7FFFD4">
+                                        <SELECT NAME="position" id="position">select
     <OPTION VALUE="select">select
     <?php
         //loop through all table rows
@@ -84,23 +89,25 @@ if (isset($_POST['Submit']))
         }
     ?>
     </SELECT>
-    </td>
-</tr>
-<tr>
-    <td bgcolor="#BDB76B">&nbsp;</td>
-    <td bgcolor="#BDB76B"><input type="submit" name="Submit" value="Add" /></td>
-</tr>
-</table>
-<hr>
-<table border="0" width="620" align="center">
-<CAPTION><h3>AVAILABLE CANDIDATES</h3></CAPTION>
-<tr>
-<th>Candidate ID</th>
-<th>Candidate Name</th>
-<th>Candidate Position</th>
-</tr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#BDB76B">&nbsp;</td>
+                                    <td bgcolor="#BDB76B"><input type="submit" name="Submit" value="Add" /></td>
+                                </tr>
+                        </table>
+                        <hr>
+                        <table border="0" width="620" align="center">
+                            <CAPTION>
+                                <h3>AVAILABLE CANDIDATES</h3>
+                            </CAPTION>
+                            <tr>
+                                <th>Candidate ID</th>
+                                <th>Candidate Name</th>
+                                <th>Candidate Position</th>
+                            </tr>
 
-<?php
+                            <?php
     //loop through all table rows
     while ($row= mysqli_fetch_array($result)){
     echo "<tr>";
@@ -114,18 +121,11 @@ if (isset($_POST['Submit']))
     mysqli_close($mysqli);
 ?>
 
-</table>
-<hr>
-</div>
+                        </table>
+                        <hr>
+                    </div>
 
 
-</body>
-</html>
+                </body>
 
-
-
-
-
-
-
-
+                </html>

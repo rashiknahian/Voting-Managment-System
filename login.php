@@ -55,7 +55,7 @@
                         </table>
                         <center>
                             <br>Not yet registered? <a href="registeracc.php"><b>Register Here</b></a>
-                            
+
                         </center>
 
                     </blockquote>

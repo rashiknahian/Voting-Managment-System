@@ -42,54 +42,59 @@ if(isset($_POST["submit"])){
 ?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<?php include "head.php"; ?>
+    <!DOCTYPE html>
+    <html>
 
-</head>
-<body id="top">
+    <head>
+        <?php include "head.php"; ?>
 
+    </head>
 
-
-<div class="wrapper row1">
-  <?php include "header_admin.php";?>
-</div>
-
-<div >
-<table width="380" align="center">
-<CAPTION><h3>ADD CANDIDATE's DATA</h3></CAPTION>
-<form  method="post" enctype='multipart/form-data'>
-<tr>
-    <td bgcolor="#FAEBD7">Candidate Name</td>
-    <td bgcolor="#FAEBD7"><input type="text" name="name" /></td>
-</tr>
-
-<tr>
-    <td bgcolor="#FAEBD7">Candidate Email</td>
-    <td bgcolor="#FAEBD7"><input type="text" name="email" /></td>
-</tr>
-<tr>
-    <td bgcolor="#FAEBD7">Candidate Mobile</td>
-    <td bgcolor="#FAEBD7"><input type="text" name="phone" /></td>
-</tr>
-<tr>
-    <td bgcolor="#FAEBD7">Candidate Address</td>
-    <td bgcolor="#FAEBD7"><input type="text" name="address" /></td>
-</tr>
-<tr>
-    <td bgcolor="#FAEBD7">Candidate Photo</td>
-    <td bgcolor="#FAEBD7"><input type="file" name="image" /></td>
-</tr>
-<tr>
-    <td bgcolor="#BDB76B">&nbsp;</td>
-    <td bgcolor="#BDB76B"><input type="submit" name="submit" value="submit" /></td>
-</tr>
-    </form>
-</table>
-<hr>
-</div>
+    <body id="top">
 
 
-</body>
-</html>
+
+        <div class="wrapper row1">
+            <?php include "header_admin.php";?>
+        </div>
+
+        <div>
+            <table width="380" align="center">
+                <CAPTION>
+                    <h3>ADD CANDIDATE's DATA</h3>
+                </CAPTION>
+                <form method="post" enctype='multipart/form-data'>
+                    <tr>
+                        <td bgcolor="#FAEBD7">Candidate Name</td>
+                        <td bgcolor="#FAEBD7"><input type="text" name="name" /></td>
+                    </tr>
+
+                    <tr>
+                        <td bgcolor="#FAEBD7">Candidate Email</td>
+                        <td bgcolor="#FAEBD7"><input type="text" name="email" /></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FAEBD7">Candidate Mobile</td>
+                        <td bgcolor="#FAEBD7"><input type="text" name="phone" /></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FAEBD7">Candidate Address</td>
+                        <td bgcolor="#FAEBD7"><input type="text" name="address" /></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FAEBD7">Candidate Photo</td>
+                        <td bgcolor="#FAEBD7"><input type="file" name="image" /></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BDB76B">&nbsp;</td>
+                        <td bgcolor="#BDB76B"><input type="submit" name="submit" value="submit" /></td>
+                    </tr>
+                </form>
+            </table>
+            <hr>
+        </div>
+
+
+    </body>
+
+    </html>

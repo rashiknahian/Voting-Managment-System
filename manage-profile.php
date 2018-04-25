@@ -55,7 +55,7 @@
             <div class="wrapper row1">
                 <header id="header" class="hoc clear">
                     <div id="logo" class="fl_left">
-                        
+
                     </div>
                     <nav id="mainav" class="fl_right">
                         <ul class="clear">
@@ -76,33 +76,33 @@
                                     <CAPTION>
                                         <h3>MY PROFILE</h3>
                                     </CAPTION>
-                                    
-                                        <br>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td style="color:#000000" ;>First Name:</td>
-                                            <td style="color:#000000" ;>
-                                                <?php echo $firstName; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color:#000000" ;>Last Name:</td>
-                                            <td style="color:#000000" ;>
-                                                <?php echo $lastName; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="color:#000000" ;>Email:</td>
-                                            <td style="color:#000000" ;>
-                                                <?php echo $email; ?>
-                                            </td>
-                                        </tr>
 
-                                    
+                                    <br>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color:#000000" ;>First Name:</td>
+                                        <td style="color:#000000" ;>
+                                            <?php echo $firstName; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:#000000" ;>Last Name:</td>
+                                        <td style="color:#000000" ;>
+                                            <?php echo $lastName; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:#000000" ;>Email:</td>
+                                        <td style="color:#000000" ;>
+                                            <?php echo $email; ?>
+                                        </td>
+                                    </tr>
+
+
                                 </table>
 
 
