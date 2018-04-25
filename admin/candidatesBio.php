@@ -9,7 +9,7 @@ if(isset($_POST["submit"])){
     //DB details
         $dbHost = 'localhost';
         $dbUsername = 'root';
-        $dbPassword = 'root';
+        $dbPassword = '';
         $dbName = 'votingdatabase';
         
         //Create connection and select DB

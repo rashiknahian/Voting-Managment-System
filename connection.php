@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = mysqli_connect("localhost","root","root","votingdatabase");
+$mysqli = mysqli_connect("localhost","root","","votingdatabase");
 
 // Check connection
 if (mysqli_connect_errno())
